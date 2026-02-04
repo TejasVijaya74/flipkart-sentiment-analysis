@@ -1,0 +1,26 @@
+python==3.11
+
+# Data handling
+numpy
+pandas
+scikit-learn
+
+# NLP
+nltk
+
+# Experiment tracking
+mlflow
+
+# Workflow orchestration
+prefect
+
+# Visualization
+matplotlib
+seaborn
+
+# App / API (if used later)
+fastapi
+uvicorn
+
+# Utilities
+joblib
