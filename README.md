@@ -50,3 +50,44 @@ python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
 pip install -r environment.txt
 streamlit run app/app.py
+```
+## Using MLflow for Experiment Tracking and Model Management
+
+MLflow is used in this project to track experiments, compare models, and manage trained model versions.
+
+### Features implemented
+- Tracked multiple models (Logistic Regression, Linear SVM)
+- Logged parameters, metrics (F1-score), and artifacts
+- Compared experiment runs using MLflow UI
+- Registered and versioned the best-performing model
+- Enabled reproducibility and experiment history tracking
+
+### Run training with MLflow
+```bash
+python scripts/train_with_mlflow.py
+```
+### Launch MLflow UI
+
+### Start the MLflow tracking server:
+```bash
+mlflow ui
+```
+### Open in your browser:
+```bash
+http://127.0.0.1:5000
+```
+## Workflow Orchestration with Prefect (Optional)
+
+Prefect is used to orchestrate the model training pipeline as a workflow.
+
+- Pipeline steps
+- Load dataset
+- Preprocess text data
+- Train models
+- Log metrics and models to MLflow
+
+### Run Prefect flow
+```bash
+python scripts/prefect_train_flow.py
+```
+This enables structured, reusable, and automated machine learning pipelines.
